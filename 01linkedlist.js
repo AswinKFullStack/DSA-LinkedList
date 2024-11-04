@@ -95,7 +95,7 @@ class LinkedList{
             return removeNode.value;
         }else{
             let prev = this.head;
-            while(prev.next && prev.next != value){
+            while(prev.next && prev.next.value !== value){
                 prev =  prev.next;
             }
             if(prev.next){
@@ -125,44 +125,23 @@ class LinkedList{
 }
 
 let list = new LinkedList();
-console.log("Is this list is empty ? = " ,list.isEmpty());
-console.log("size of list = " ,list.getSize());
-console.log("now the list look like this  = ",list)
 
-console.log("-------------------------------------------------------------------")
+
 list.prepend(10);
-console.log("Is this list is empty ? = " ,list.isEmpty());
-console.log("size of list = " ,list.getSize());
-console.log("list elements = ",list.print());
-console.log("now the list look like this  = ",list)
-console.log("-------------------------------------------------------------------")
 list.prepend(5);
-console.log("Is this list is empty ? = " ,list.isEmpty());
-console.log("size of list = " ,list.getSize());
-console.log("list elements = ",list.print());
-console.log("now the list look like this  = ",list)
-console.log("-------------------------------------------------------------------")
 list.append(15);
-console.log("Is this list is empty ? = " ,list.isEmpty());
-console.log("size of list = " ,list.getSize());
-console.log("list elements = ",list.print());
-console.log("now the list look like this  = ",list)
-console.log("-------------------------------------------------------------------")
 list.append(20);
+console.log("list elements = ",list.print());
+console.log("-------------------------------------------------------------------")
+
+console.log("removed value is = ",list.removeFrom(1));
 console.log("Is this list is empty ? = " ,list.isEmpty());
 console.log("size of list = " ,list.getSize());
 console.log("list elements = ",list.print());
 console.log("now the list look like this  = ",list)
 console.log("-------------------------------------------------------------------")
 
-list.removeFrom(1);
-console.log("Is this list is empty ? = " ,list.isEmpty());
-console.log("size of list = " ,list.getSize());
-console.log("list elements = ",list.print());
-console.log("now the list look like this  = ",list)
-console.log("-------------------------------------------------------------------")
-
-list.removeValue(15);
+console.log("removed value is = ",list.removeValue(15));
 console.log("Is this list is empty ? = " ,list.isEmpty());
 console.log("size of list = " ,list.getSize());
 console.log("list elements = ",list.print());
