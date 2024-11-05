@@ -122,6 +122,21 @@ class LinkedList{
         }
         return -1
     }
+    reverse(){
+        if(this.isEmpty()){
+            return null;
+        }
+        let prev = null;
+        let curr = this.head ;
+        while(curr){
+            let next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        this.head = prev;
+
+    }
     print(){
         if(this.isEmpty()){
             console.log("The list is empty");
@@ -146,19 +161,6 @@ list.prepend(10);
 list.prepend(5);
 list.append(15);
 list.append(20);
-console.log("list elements = ",list.print());
-console.log("-------------------------------------------------------------------")
-
-console.log("removed value is = ",list.removeFrom(1));
-console.log("Is this list is empty ? = " ,list.isEmpty());
-console.log("size of list = " ,list.getSize());
-console.log("list elements = ",list.print());
-console.log("now the list look like this  = ",list)
-console.log("-------------------------------------------------------------------")
-
-console.log("removed value is = ",list.removeValue(15));
-console.log("Is this list is empty ? = " ,list.isEmpty());
-console.log("size of list = " ,list.getSize());
-console.log("list elements = ",list.print());
-console.log("now the list look like this  = ",list)
-console.log("-------------------------------------------------------------------")
+list.print();
+list.reverse();
+list.print();
