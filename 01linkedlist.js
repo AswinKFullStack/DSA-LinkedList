@@ -30,13 +30,12 @@ class LinkedList{
     append(value){
         const node = new Node(value);
         if(this.isEmpty()){
-            this.head = node
+            this.head = node;
+            this.tail = node;
+
         }else{
-            let curr = this.head;
-            while(curr.next){
-                curr = curr.next;
-            }
-            curr.next = node;
+            this.tail.next = node;
+            this.tail = node;
         }
         this.size++;
     }
@@ -161,8 +160,11 @@ let list = new LinkedList();
 
 list.prepend(10);
 list.prepend(5);
+
+console.log(list);
 list.append(15);
-list.append(20);
-list.print();
-list.reverse();
-list.print();
+console.log(list);
+// list.append(20);
+// list.print();
+// list.reverse();
+// list.print();
