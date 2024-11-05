@@ -7,6 +7,7 @@ class Node {
 class LinkedList{
     constructor(){
         this.head = null;
+        this.tail = null;
         this.size = 0;
     }
     isEmpty(){
@@ -19,6 +20,7 @@ class LinkedList{
         const node = new Node(value);
         if(this.isEmpty()){
             this.head = node
+            this.tail = node;
         }else{
             node.next = this.head;
             this.head = node;
