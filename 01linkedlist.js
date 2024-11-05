@@ -59,6 +59,14 @@ class LinkedList{
 
 
     }
+    removeFromFrond(){
+        if(this.isEmpty()){
+            return null
+        }
+        const removeNode = this.head;
+        this.head = removeNode.next;
+        this.size--;
+    }
     removeFrom(index){
         if(index < 0 || index > this.size){
             console.log("Linked list is empty");
@@ -163,6 +171,8 @@ list.prepend(5);
 
 console.log(list);
 list.append(15);
+console.log(list);
+list.removeFromFrond();
 console.log(list);
 // list.append(20);
 // list.print();
