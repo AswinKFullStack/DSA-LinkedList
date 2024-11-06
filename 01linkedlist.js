@@ -192,11 +192,11 @@ list.prepend(5);
 list.append(15);
 list.append(20);
 list.append(25);
-console.log(list);
+// console.log(list);
 
-list.removeFromEnd();
-console.log(list);
+// list.removeFromEnd();
+// console.log(list);
 // list.append(20);
-// list.print();
-// list.reverse();
-// list.print();
+list.print();
+list.reverse();
+list.print();

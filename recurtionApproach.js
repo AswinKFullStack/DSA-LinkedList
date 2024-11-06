@@ -5,15 +5,12 @@ function fibonacci(n , currentPosition = 2 ,first = 0,second = 1){
     if(n<2){
         return n
     }
-
-  
     let curr =  first + second;
     
     if(currentPosition === n){
         return curr
 
     }
-   
     return  fibonacci(n,currentPosition + 1,second,curr)
 }
 
